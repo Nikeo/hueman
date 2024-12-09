@@ -241,20 +241,18 @@ a.czr-rating-link:hover {
 .remove_google_fonts select[data-customize-setting-link="hu_theme_options[font]"] + .selecter .selecter-item[data-value="tahoma"] {
     display: block;
 }
-#customize-theme-controls .customize-pane-parent h3.accordion-section-title {
+#customize-theme-controls .customize-pane-parent h3.accordion-section-title .accordion-trigger {
   display: flex;
   align-items: center;
   flex-wrap:wrap;
   column-gap: 10px;
   position:relative;
+  padding-left:0;
+  width: 100%;
 }
 #customize-theme-controls .accordion-section-title:after {
   top: 50%;
   transform: translateY(-50%);
-}
-#customize-theme-controls .customize-pane-parent .accordion-section-title .accordion-trigger {
-  padding-left:0;
-  width: auto;
 }
 #customize-theme-controls .customize-pane-parent  .czr-panel-subtitle{
   width:100%;

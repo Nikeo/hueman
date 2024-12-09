@@ -6,7 +6,7 @@
 
         /* WIDGET PANEL ICON */
         if ( $('.control-panel-widgets').find('.accordion-section-title').first().length ) {
-              $('.control-panel-widgets').find('.accordion-section-title')
+              $('.control-panel-widgets').find('.accordion-section-title button')
                     .first()
                     .prepend( $('<span/>', {class:'fas fa-magic'} ) );
         }

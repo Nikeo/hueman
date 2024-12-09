@@ -60,8 +60,8 @@ if ( ! class_exists( 'HU_Customize_Panels') ) :
         <h3 class="accordion-section-title" tabindex="0">
         <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="static_front_page-content">
         {{ data.title }}
-				</button>
-          <span class="czr-panel-subtitle">{{ data.czr_subtitle }}</span>
+        <span class="czr-panel-subtitle">{{ data.czr_subtitle }}</span>
+				</button>          
           <span class="screen-reader-text"><?php _e( 'Press return or enter to open this panel', 'hueman' ); ?></span>
         </h3>
         <ul class="accordion-sub-container control-panel-content"></ul>
