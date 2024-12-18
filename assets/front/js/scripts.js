@@ -316,6 +316,7 @@ if (!Array.from) {
       };
 })( jQuery, window );
 (function ( $ ) {
+      var plugname = [];
     var pluginName = 'extLinks',
         defaults = {
           addIcon : true,
@@ -415,14 +416,23 @@ if (!Array.from) {
       var _pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
       return _pattern.test( _url );
     };
-    $.fn[pluginName] = function ( options ) {
-      return this.each(function () {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-            $.data(this, 'plugin_' + pluginName,
-            new Plugin( this, options ));
-        }
+    $.fn[pluginName] = function ( options ) {			
+      return this.each(function (index) {
+            try{
+                  var chkplugname = 'plugin_' + pluginName;
+                  if (!$.data(this, 'plugin_' + pluginName)) {
+                        if($.inArray(chkplugname, plugname) == -1){
+                              plugname[index] = 'plugin_' + pluginName;
+                              $.data(this, 'plugin_' + pluginName,
+                              new Plugin( this, options ));
+                        }
+                  }
+            }
+            catch(err){
+              console.log("error:" + err);
+            }
       });
-    };
+};
 
 })( jQuery );
 (function ( $, window ) {
